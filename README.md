@@ -28,4 +28,5 @@ common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-2
 common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00019-ip-10-180-136-8.ec2.internal.warc.gz
 
 Then to download one of the archieve, use this kind of url
+
 https://aws-publicdatasets.s3.amazonaws.com/common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500811391.43/warc/CC-MAIN-20140820021331-00261-ip-10-180-136-8.ec2.internal.warc.gz
