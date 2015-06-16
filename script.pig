@@ -1,7 +1,7 @@
 A = load 'CompanyList.csv' using PigStorage(',') AS (rank,name,country,sector,value);
 companies = FOREACH A GENERATE name;
 
-B = load 'input.warc';
+B = load 'small_input.warc';
 data = foreach B generate FLATTEN(TOKENIZE($0));
 
 J = JOIN companies BY $0 RIGHT OUTER, data BY $0;
