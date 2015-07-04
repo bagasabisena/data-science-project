@@ -1,0 +1,263 @@
+Facebook	9140
+Twitter	7210
+Google	5624
+Company	4924
+Microsoft	3306
+Total	2879
+Apple	2861
+Nike	1801
+Southern	1489
+Yahoo	1178
+BMW	1161
+Orange	1133
+Intel	921
+Canon	688
+Adidas	654
+Oracle	601
+Investor	521
+3M	507
+CBS	495
+Panasonic	494
+Sprint	414
+Visa	397
+eBay	388
+IBM	378
+Target	376
+Nokia	305
+Merck	236
+Volvo	217
+Continental	204
+Ace	194
+Starbucks	187
+Boeing	186
+Volkswagen	161
+Apache	158
+Mitsubishi	158
+Vale	141
+Blackrock	134
+General Motors	133
+SAP	129
+Walt Disney	125
+Home Depot	114
+Time Warner	113
+Deere	112
+Carnival	106
+Telstra	105
+Renault	95
+American Express	95
+BP	95
+Barclays	91
+Hitachi	90
+CSL	90
+Bridgestone	88
+Ericsson	82
+BNP Paribas	81
+Adobe Systems	78
+Tesco	76
+Airbus	74
+Chevron	65
+Roche	63
+Comcast	61
+Kellogg	59
+Cummins	55
+Stryker	53
+Eaton	49
+Qualcomm	48
+Mastercard	48
+Nestle	46
+Caterpillar	46
+Vinci	45
+Ford Motor	41
+Bayer	41
+Shire	39
+Daimler	39
+General Dynamics	38
+ITC	38
+HSBC	37
+DirecTV	37
+Texas Instruments	36
+Lockheed Martin	35
+Michelin	33
+Cigna	32
+Halliburton	32
+EMC	32
+Corning	30
+Reckitt Benckiser	30
+Pfizer	30
+Heineken	29
+Unilever	29
+Siemens	29
+Hess	28
+Philips Electronics	28
+Wells Fargo	27
+Kroger	25
+General Electric	25
+Aetna	25
+Honeywell International	24
+ABB	22
+Henkel	22
+Diageo	22
+Goldman Sachs	20
+Duke Energy	20
+Aviva	19
+Berkshire Hathaway	19
+Norfolk Southern	18
+Monsanto	18
+Johnson Controls	18
+Toyota Motor	17
+Raytheon	17
+ING	16
+Generali	15
+Christian Dior	15
+Rio Tinto	15
+UBS	14
+Deutsche Bank	14
+Honda Motor	14
+Morgan Stanley	14
+Nomura	12
+Accenture	12
+Vivendi	11
+Intuit	11
+Thomson Reuters	11
+Allianz	11
+Celgene	11
+PTT	11
+Union Pacific	10
+Actavis	10
+Viacom	10
+Sanofi	10
+Novartis	10
+Tesla Motors	10
+Enbridge	10
+Prudential	10
+Allstate	10
+Allergan	9
+CSX	9
+Carrefour	9
+Cielo	9
+Statoil	9
+Express Scripts	9
+Compass Group	9
+Scania	9
+Baker Hughes	9
+Cisco Systems	9
+Schneider Electric	8
+United Technologies	8
+Walgreen	8
+State Street	8
+Gilead Sciences	8
+BBVA	8
+Fedex	8
+Phillips 66	8
+McKesson	7
+Astellas Pharma	7
+Medtronic	7
+Amgen	7
+Northrop Grumman	7
+ConocoPhillips	7
+Citigroup	7
+Deutsche Telekom	7
+Schlumberger	7
+Costco Wholesale	7
+Dow Chemical	6
+Aon	6
+Charles Schwab	6
+General Mills	6
+Biogen Idec	6
+UnitedHealth Group	6
+China Mobile	6
+CVS Caremark	5
+LyondellBasell Industries	5
+Public Storage	5
+Sasol	5
+Mediatek	5
+Praxair	5
+PepsiCo	5
+Cardinal Health	5
+American Tower	5
+Applied Materials	5
+Devon Energy	5
+Danaher	5
+Reynolds American	5
+Dominion Resources	5
+Iberdrola	5
+Noble Energy	5
+Becton Dickinson	5
+Petrobras	5
+EDF	5
+Beiersdorf	5
+Regeneron Pharmaceuticals	5
+Telefonica	5
+AstraZeneca	5
+BG Group	5
+BCE	4
+Reed Elsevier	4
+GlaxoSmithKline	4
+Denso	4
+Woolworths	3
+Abbott Laboratories	3
+Samsung Electronics	3
+Mitsubishi Electric	3
+Fresenius	3
+Nissan Motor	3
+AMX	3
+CME Group	3
+Lafarge	3
+Novo Nordisk	3
+Telus	3
+Micron Technology	3
+Richemont	3
+Hyundai Motor	3
+Naver	3
+Swatch Group	2
+Saint Gobain	2
+Exxon Mobil	2
+Kinder Morgan	2
+Luxottica	2
+Eli Lilly	2
+Valero Energy	2
+Softbank	2
+Anglo American	2
+Fast Retailing	2
+Telenor	2
+TJX Cos	2
+Inditex	2
+Credit Agricole	2
+Mitsui	2
+Kering	2
+Exelon	2
+Danone	2
+Bankia	2
+Anadarko Petroleum	2
+LVMH	2
+RWE	2
+Eni	2
+DNB	2
+Westpac Banking	1
+Enel	1
+CIBC	1
+Repsol	1
+V F	1
+Safran	1
+Southern Copper	1
+BHP Billiton	1
+Rosneft	1
+PPG Industries	1
+Syngenta	1
+HDFC Bank	1
+China Unicom	1
+Munich Re	1
+Wellpoint	1
+Gazprom	1
+Hyundai Mobis	1
+Prudential Financial	1
+Mondelez International	1
+Verizon Communications	1
+NTT DoCoMo	1
+Axa	1
+ANZ Banking	1
+Air Liquide	1
+Marathon Petroleum	1
+Femsa	1
+ARM Holdings	1
+Holcim	1

@@ -1,0 +1,284 @@
+Facebook	18966
+Twitter	15162
+Google	10869
+Company	9699
+Microsoft	6570
+Apple	5791
+Total	5703
+Nike	4108
+Southern	2973
+Yahoo	2507
+Orange	2287
+BMW	2202
+Intel	2069
+Adidas	1352
+Canon	1269
+Oracle	1262
+eBay	1135
+General Electric	1134
+CBS	1083
+Investor	983
+Target	949
+Panasonic	931
+Sprint	813
+Visa	804
+3M	802
+IBM	770
+Nokia	695
+Volvo	421
+Ace	417
+Continental	415
+Mitsubishi	357
+Volkswagen	351
+Apache	346
+Vale	322
+Boeing	316
+Starbucks	305
+Deere	272
+Blackrock	264
+Merck	263
+Time Warner	246
+BP	233
+Carnival	232
+SAP	229
+Telstra	213
+Bridgestone	213
+American Express	213
+Walt Disney	207
+General Motors	204
+Renault	191
+Hitachi	190
+Home Depot	166
+Ericsson	160
+Tesco	159
+Adobe Systems	159
+BNP Paribas	149
+Barclays	140
+Comcast	139
+Roche	135
+Chevron	135
+ITC	131
+Mastercard	116
+CSL	112
+Vinci	108
+Airbus	108
+Cummins	107
+Kellogg	107
+Eaton	103
+Siemens	102
+DirecTV	101
+Michelin	101
+Nestle	94
+Bayer	93
+Ford Motor	82
+Stryker	80
+Caterpillar	79
+Halliburton	74
+Heineken	73
+Corning	73
+Pfizer	71
+Texas Instruments	70
+Qualcomm	67
+Lockheed Martin	64
+Exelon	63
+Unilever	62
+Reckitt Benckiser	62
+General Dynamics	60
+Wells Fargo	60
+EMC	58
+Honeywell International	56
+HSBC	55
+Philips Electronics	54
+Daimler	52
+Aetna	52
+Henkel	52
+Monsanto	51
+Cigna	49
+Aviva	49
+ABB	48
+Shire	47
+Christian Dior	46
+Allstate	45
+UBS	44
+Kroger	42
+Goldman Sachs	41
+Hess	40
+Diageo	38
+Citigroup	37
+Berkshire Hathaway	37
+Toyota Motor	34
+Deutsche Bank	32
+Honda Motor	31
+Intuit	31
+Johnson Controls	31
+ING	30
+Sanofi	29
+Allianz	29
+General Mills	28
+Thomson Reuters	25
+Norfolk Southern	25
+Morgan Stanley	25
+Raytheon	24
+Nomura	24
+Generali	23
+Duke Energy	23
+Actavis	22
+Novartis	22
+Viacom	22
+Prudential	21
+Union Pacific	21
+Danaher	21
+Cisco Systems	21
+State Street	20
+Northrop Grumman	19
+CSX	19
+Accenture	19
+PTT	19
+Cielo	19
+Allergan	19
+Baker Hughes	18
+Fedex	18
+Walgreen	18
+Vivendi	17
+BCE	17
+Rio Tinto	17
+Enbridge	17
+CVS Caremark	17
+Celgene	17
+United Technologies	16
+Becton Dickinson	15
+Compass Group	15
+Schneider Electric	15
+Tesla Motors	14
+Denso	14
+Amgen	14
+Anglo American	14
+McKesson	14
+Costco Wholesale	14
+Statoil	14
+Medtronic	13
+Charles Schwab	13
+BBVA	13
+Reed Elsevier	13
+Biogen Idec	13
+Phillips 66	13
+Carrefour	13
+Scania	12
+ConocoPhillips	12
+AstraZeneca	12
+Schlumberger	12
+LyondellBasell Industries	12
+Regeneron Pharmaceuticals	11
+Applied Materials	11
+Dow Chemical	11
+Telefonica	11
+Praxair	11
+UnitedHealth Group	11
+Iberdrola	10
+Cardinal Health	10
+EDF	10
+RWE	10
+American Tower	10
+BG Group	10
+Noble Energy	10
+Devon Energy	10
+Dominion Resources	10
+Beiersdorf	10
+Micron Technology	10
+Reynolds American	10
+PepsiCo	9
+Express Scripts	9
+China Mobile	8
+Samsung Electronics	8
+Sasol	8
+Gilead Sciences	8
+AMX	8
+Deutsche Telekom	8
+Astellas Pharma	7
+Mediatek	7
+Richemont	7
+Fresenius	7
+TJX Cos	6
+Kering	6
+Swatch Group	6
+Fast Retailing	6
+Aflac	6
+LVMH	6
+Aon	6
+Luxottica	6
+Danone	6
+Inditex	6
+CME Group	6
+Mitsubishi Electric	6
+Eni	5
+DNB	5
+Telus	5
+Petrobras	5
+Woolworths	5
+Public Storage	5
+CIBC	5
+GlaxoSmithKline	5
+Novo Nordisk	4
+Baxter International	4
+Verizon Communications	4
+EOG Resources	4
+Hyundai Motor	4
+Credit Agricole	4
+Manulife Financial	4
+Exxon Mobil	4
+Lafarge	4
+BHP Billiton	4
+Telenor	4
+Naver	4
+Linde	4
+Kinder Morgan	3
+Bankia	3
+Abbott Laboratories	3
+Enel	3
+Nissan Motor	3
+Repsol	3
+Saint Gobain	2
+MTN Group	2
+Munich Re	2
+Mitsui	2
+Softbank	2
+Holcim	2
+Atlas Copco	2
+China Unicom	2
+Anadarko Petroleum	2
+ArcelorMittal	2
+Deutsche Post	2
+Mondelez International	2
+National Grid	2
+Valero Energy	2
+Rosneft	2
+Eli Lilly	2
+Covidien	1
+HDFC Bank	1
+Marathon Oil	1
+Femsa	1
+Safran	1
+V F	1
+Posco	1
+ARM Holdings	1
+Gazprom	1
+PPG Industries	1
+Southern Copper	1
+Vodafone Group	1
+Air Liquide	1
+ANZ Banking	1
+Banco Santander	1
+Abbvie	1
+Wesfarmers	1
+NTT DoCoMo	1
+SK Hynix	1
+Marathon Petroleum	1
+Westpac Banking	1
+Wellpoint	1
+Axa	1
+Societe Generale	1
+Takeda Pharmaceutical	1
+Syngenta	1
+Hyundai Mobis	1
+Prudential Financial	1
+CNOOC	1
