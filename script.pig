@@ -1,8 +1,10 @@
+REGISTER udfs.jar
+
 A = load 'CompanyList.csv' using PigStorage(',') AS (rank,name,country,sector,value);
 companies = FOREACH A GENERATE name;
 
-B = load 'small_input.warc';
-data = foreach B generate FLATTEN(TOKENIZE($0));
+B = load 'testdata.warc.wet';
+data = foreach B generate flatten(udfs.NGramGenerator($0));
 
 J = JOIN companies BY $0 RIGHT OUTER, data BY $0;
 

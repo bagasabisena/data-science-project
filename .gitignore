@@ -1,0 +1,5 @@
+trunk/
+*.log
+*.class
+*.wet
+*.warc
