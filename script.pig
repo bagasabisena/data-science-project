@@ -1,3 +1,5 @@
+REGISTER udfs.jar
+
 A = load '/user/TUD-DS01/CompanyList.csv' using PigStorage(',') AS (rank,name,country,sector,value);
 companies = FOREACH A GENERATE name;
 
