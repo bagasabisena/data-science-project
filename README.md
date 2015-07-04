@@ -8,7 +8,11 @@ $ svn co http://svn.apache.org/repos/asf/hadoop/pig/trunk
 $ cd trunk
 $ ant
 ```
-A pig.jar file should be built in the trunk directory. It can be named different, then rename it to pig.jar. Then, you can compile your (and the other) UDF's as follow starting from the root directory:
+A pig.jar file should be built in the trunk directory. It can be named different, then rename it to pig.jar. Make sure you have set the HADOOP_CLASSPATH variable. To know the value it should have:
+```
+$ hadoop classpath
+```
+Then, you can compile your (and the other) UDF's as follow starting from the root directory:
 ```
 $ cd trunk
 $ javac -cp pig.jar:$HADOOP_CLASSPATH ../udfs/udf1.java ../udfs/udf2.java
