@@ -1,32 +1,18 @@
-# data-science-project
-Group Project for Data Science course
+# Data Science Project
+Group Project for Data Science course.
 
-Download the path
-https://aws-publicdatasets.s3.amazonaws.com/common-crawl/crawl-data/CC-MAIN-2014-35/warc.paths.gz
-
-It has entries of all WARC file, like this
-
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00000-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00001-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00002-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00003-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00004-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00005-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00006-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00007-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00008-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00009-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00010-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00011-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00012-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00013-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00014-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00015-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00016-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00017-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00018-ip-10-180-136-8.ec2.internal.warc.gz
-common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500800168.29/warc/CC-MAIN-20140820021320-00019-ip-10-180-136-8.ec2.internal.warc.gz
-
-Then to download one of the archieve, use this kind of url
-
-https://aws-publicdatasets.s3.amazonaws.com/common-crawl/crawl-data/CC-MAIN-2014-35/segments/1408500811391.43/warc/CC-MAIN-20140820021331-00261-ip-10-180-136-8.ec2.internal.warc.gz
+## User-defined functions
+In order to create more UDF's you can create them in the /udfs folder. In order to compile them, you should first execute the following statements in the root directory of this repository:
+```
+$ svn co http://svn.apache.org/repos/asf/hadoop/pig/trunk
+$ cd trunk
+$ ant
+```
+A pig.jar file should be built in the trunk directory. It can be named different, then rename it to pig.jar. Then, you can compile your (and the other) UDF's as follow starting from the root directory:
+```
+$ cd trunk
+$ javac -cp pig.jar:$HADOOP_CLASSPATH ../udfs/udf1.java ../udfs/udf2.java
+$ cd ../
+$ jar -cf udfs.jar udfs
+```
+Now, the udfs.jar file can be included in the pig-files to call the UDF's.
