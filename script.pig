@@ -19,4 +19,4 @@ M = foreach L generate $0, COUNT($1);
 
 N = order M by $1 desc;
 
-store N into '/user/TUD-DS01/output5.txt';
+store N into '/user/TUD-DS01/outputs';
