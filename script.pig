@@ -5,9 +5,11 @@ REGISTER udfs.jar
 A = load '/user/TUD-DS01/CompanyList.csv' using PigStorage(',') AS (rank,name,country,sector,value);
 companies = FOREACH A GENERATE name;
 
-B = load '$flist' as line;
+B = load '/data/public/common-crawl/crawl-data/CC-MAIN-2014-10/segments/[0-9]*/wet/*' as line;
+
 C =FILTER B BY NOT(line MATCHES '^WARC.*' or line MATCHES '^Content-.*');
 data = foreach C generate flatten(udfs.NGramGenerator($0));
+
 
 J = JOIN companies BY $0 RIGHT OUTER, data BY $0;
 
