@@ -1,0 +1,377 @@
+Facebook	951323
+Twitter	761418
+Google	534096
+Company	456936
+Apple	305393
+Microsoft	294027
+Total	276034
+Nike	186196
+Southern	136291
+BMW	130173
+Yahoo	121176
+Orange	120721
+Intel	88516
+Oracle	82297
+Canon	63847
+CBS	62461
+Adidas	62298
+Target	60370
+Panasonic	55416
+eBay	54025
+Investor	46466
+IBM	43683
+Visa	42342
+Sprint	40982
+Nokia	39454
+3M	21824
+Volkswagen	21777
+Continental	21602
+Ace	20873
+Apache	18843
+Volvo	18146
+Starbucks	18034
+Mitsubishi	17916
+Vale	16276
+Blackrock	15911
+Boeing	15447
+BP	14340
+General Electric	13721
+American Express	12737
+Bridgestone	12425
+Telstra	12294
+Carnival	11192
+Deere	11165
+General Motors	11056
+Time Warner	10798
+Hitachi	10719
+Walt Disney	10202
+SAP	9888
+BNP Paribas	9741
+Renault	9655
+Ericsson	9101
+Vinci	8911
+Comcast	8582
+Home Depot	8156
+Adobe Systems	7772
+Roche	7448
+Barclays	6932
+Tesco	6914
+Mastercard	6786
+Chevron	6689
+Michelin	6158
+Bayer	5761
+Nestle	5622
+Siemens	5612
+Ford Motor	5454
+Eaton	5452
+Kellogg	5339
+Airbus	5121
+DirecTV	4616
+Wells Fargo	4421
+Cummins	4315
+Corning	4172
+Caterpillar	4042
+Lockheed Martin	3916
+HSBC	3657
+Heineken	3642
+Pfizer	3522
+Texas Instruments	3465
+Stryker	3405
+Qualcomm	3339
+General Dynamics	3294
+Allstate	3292
+EMC	3122
+Reckitt Benckiser	2976
+Unilever	2889
+ITC	2810
+Merck	2786
+ABB	2658
+Aviva	2625
+Philips Electronics	2465
+Monsanto	2397
+Aetna	2387
+Generali	2384
+Hess	2312
+Henkel	2258
+Honeywell International	2251
+Diageo	2226
+Christian Dior	2114
+Shire	2104
+Cigna	2081
+Kroger	1949
+ING	1939
+Accenture	1924
+CSL	1920
+Berkshire Hathaway	1910
+Halliburton	1890
+Intuit	1883
+Toyota Motor	1820
+Prudential	1815
+UBS	1761
+Allianz	1671
+Honda Motor	1667
+Goldman Sachs	1638
+Johnson Controls	1552
+Cielo	1472
+CVS Caremark	1429
+Daimler	1416
+State Street	1341
+Cisco Systems	1318
+Deutsche Bank	1315
+Thomson Reuters	1286
+Viacom	1264
+BBVA	1260
+Actavis	1196
+UnitedHealth Group	1186
+Raytheon	1168
+Morgan Stanley	1149
+Telefonica	1132
+Union Pacific	1130
+Novartis	1108
+PTT	1093
+Northrop Grumman	1078
+CSX	1060
+Fedex	1033
+Sanofi	1022
+Enbridge	1018
+Dow Chemical	1012
+Citigroup	1003
+Allergan	945
+Walgreen	930
+Becton Dickinson	897
+Medtronic	893
+Danaher	890
+Amgen	881
+Schneider Electric	825
+ConocoPhillips	812
+Celgene	805
+Schlumberger	800
+EDF	769
+General Mills	748
+Costco Wholesale	748
+Baker Hughes	747
+United Technologies	744
+Charles Schwab	743
+McKesson	740
+Cardinal Health	724
+BCE	704
+Devon Energy	693
+Compass Group	688
+Norfolk Southern	685
+Phillips 66	684
+Praxair	683
+Biogen Idec	681
+Tesla Motors	680
+Statoil	674
+Samsung Electronics	656
+PepsiCo	655
+RWE	652
+Applied Materials	650
+Vivendi	623
+Noble Energy	577
+Regeneron Pharmaceuticals	574
+Reynolds American	572
+BG Group	572
+LyondellBasell Industries	569
+Reed Elsevier	568
+Linde	568
+Dominion Resources	565
+Iberdrola	560
+Scania	559
+American Tower	559
+Nissan Motor	516
+Duke Energy	510
+GlaxoSmithKline	495
+Express Scripts	487
+Telus	475
+Aflac	474
+Anglo American	446
+Deutsche Telekom	420
+Fresenius	416
+Denso	384
+CME Group	374
+Mediatek	374
+Nomura	354
+Carrefour	351
+Micron Technology	329
+AMX	328
+V F	328
+Aon	314
+Telenor	311
+SEB	309
+Exxon Mobil	306
+Exelon	304
+Eli Lilly	298
+Rio Tinto	295
+Eni	286
+DNB	274
+Mitsubishi Electric	269
+Safran	267
+ArcelorMittal	261
+Woolworths	243
+AstraZeneca	243
+Danone	227
+LVMH	225
+Beiersdorf	216
+Verizon Communications	215
+China Mobile	212
+Novo Nordisk	207
+Munich Re	207
+National Grid	205
+Abbott Laboratories	204
+Mitsui	202
+Public Storage	179
+Repsol	178
+Petrobras	175
+Gazprom	173
+CIBC	161
+Fast Retailing	160
+Luxottica	159
+Mondelez International	158
+Wipro	155
+Kering	150
+Richemont	148
+Inditex	142
+BHP Billiton	139
+Hyundai Motor	137
+Swatch Group	130
+Enel	128
+Standard Chartered	124
+Vodafone Group	123
+TJX Cos	119
+Ecolab	119
+Gilead Sciences	118
+Rosneft	117
+Baxter International	116
+Softbank	115
+Sasol	113
+ARM Holdings	112
+WPP	111
+Syngenta	110
+Kia Motors	107
+Kinder Morgan	107
+Saint Gobain	102
+China Unicom	102
+Lukoil	92
+NTT DoCoMo	91
+PPG Industries	87
+Covidien	84
+Marathon Oil	83
+Credit Agricole	81
+Wellpoint	79
+Sampo	79
+Emerson Electric	79
+Lafarge	76
+TeliaSonera	76
+Societe Generale	74
+Valero Energy	72
+Naver	70
+SK Hynix	70
+Sinopec	63
+Metlife	62
+Bradesco	60
+Prudential Financial	59
+Wynn Resorts	59
+Air Liquide	58
+Forest Laboratories	57
+Deutsche Post	56
+Bankia	56
+Liberty Global	54
+Gas Natural	53
+Axa	52
+Precision Castparts	51
+KDDI	50
+Manulife Financial	50
+Swisscom	49
+Danske Bank	47
+Centrica	47
+Astellas Pharma	47
+Fanuc	45
+TE Connectivity	44
+PetroChina	43
+Teva Pharmaceutical	41
+Husky Energy	41
+Banco Santander	41
+Anadarko Petroleum	40
+Posco	38
+Atlas Copco	38
+Yahoo Japan	38
+Occidental Petroleum	38
+Unicredit	37
+Holcim	36
+Continental Resources	35
+Abbvie	35
+EOG Resources	34
+Glencore Xstrata	34
+CNOOC	34
+ICICI Bank	34
+Marathon Petroleum	31
+Natixis	28
+BT Group	27
+E On	27
+Alexion Pharmaceuticals	26
+Novatek	26
+Suncor Energy	26
+Sempra Energy	24
+Tenaris	24
+Intesa Sanpaolo	23
+Imperial Oil	23
+Reliance Industries	19
+Altria Group	18
+Infosys Technologies	18
+Mitsui Fudosan	17
+Spectra Energy	15
+GDF Suez	14
+Norilsk Nickel	14
+US Bancorp	14
+Imperial Tobacco	13
+HDFC Bank	12
+Wesfarmers	12
+Franklin Resources	12
+Saudi Telecom	12
+Hutchison Whampoa	12
+Southern Copper	12
+Femsa	12
+Westpac Banking	10
+Cheung Kong	10
+Ambev	10
+Galaxy Entertainment	9
+Japan Tobacco	8
+Transcanada	8
+ANZ Banking	8
+Hyundai Mobis	7
+MTN Group	7
+HCA Holdings	7
+Woodside Petroleum	7
+Tencent Holdings	6
+Industries Qatar	6
+Tokio Marine	6
+Takeda Pharmaceutical	6
+Keyence	6
+Paccar	6
+Nordea Bank	5
+Industrial Bank	5
+Basf	5
+Walmex	4
+Svenska Handelsbanken	4
+Kweichow Moutai	4
+Chunghwa Telecom	4
+Mitsubishi Estate	4
+Intercontinental Exchange	4
+Itau Unibanco	4
+KBC Group	4
+Jardine Matheson	3
+Sands China	3
+Grupo Mexico	3
+Naspers	3
+CaixaBank	3
+Nextera Energy	3
+DBS Group	2
+AIA Group	2
+Astra International	2
+Swedbank	2
+Formosa Petrochemical	1
+Jardine Strategic	1
+Malayan Banking	1
+Power Financial	1
+Swiss RE	1

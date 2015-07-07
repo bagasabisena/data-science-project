@@ -5,7 +5,7 @@ REGISTER udfs.jar
 A = load '/user/TUD-DS01/CompanyList.csv' using PigStorage(',') AS (rank,name,country,sector,value);
 companies = FOREACH A GENERATE name;
 
-B = load '/data/public/common-crawl/crawl-data/CC-MAIN-2014-10/segments/[0-9]*/wet/*' as line;
+B = load '/data/public/common-crawl/crawl-data/CC-MAIN-2014-10/segments/1394678706211/wet/*' as line;
 
 C =FILTER B BY NOT(line MATCHES '^WARC.*' or line MATCHES '^Content-.*');
 data = foreach C generate flatten(udfs.NGramGenerator($0));
@@ -21,4 +21,4 @@ M = foreach L generate $0, COUNT($1);
 
 N = order M by $1 desc;
 
-store N into '/user/TUD-DS01/outputs';
+store N into '/user/TUD-DS01/outputs_2015-07-07-11-34';
