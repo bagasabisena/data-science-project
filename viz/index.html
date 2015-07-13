@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        svg#chart {
+            background: white;
+            margin: 5px;
+        }
+
+        .bar {
+            stroke: white;
+            fill: steelblue;
+        }
+
+        svg#chart text.count {
+            fill: gray;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        svg#chart text.company {
+            fill: #000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        svg#chart line {
+            stroke: #c1c1c1;
+        }
+
+        svg#chart .rule {
+            fill: #000;
+        }
+
+        svg#chart .rule {
+            fill: #000;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        /* removed the while stroke as we don't need it anymore */
+        #svgArea svg#chart rect {
+            stroke: none;
+        }
+
+        /* a bit of hovering effect for each bar */
+        #svgArea svg#chart rect:hover {
+            fill: gray;
+        }
+    </style>
+</head>
+<body>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/d3/d3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="node_modules/underscore/underscore-min.js"></script>
+
+<h1>Fortune-500 Companies on the CommonCrawl</h1>
+
+<select id="select-sector">
+    <option selected disabled>Filter by company sector</option>
+    <option value="all">All sector (no filter)</option>
+</select>
+
+<select id="select-sort_by">
+    <option selected disabled>Sort by counts or ranks</option>
+    <option value="count">Company count in the CommonCrawl</option>
+    <option value="rank">Company rank in Fortune-500 list</option>
+</select>
+
+<select id="select-rank">
+    <option selected disabled>Number of companies to show</option>
+    <option value="10">10</option>
+    <option value="20">20</option>
+    <option value="50">50</option>
+    <option value="100">100</option>
+    <option value="200">200</option>
+    <option value="500">500</option>
+</select>
+<button id="filter">Submit</button>
+
+<div>
+    <div class="col-md-7" id="svgArea">
+        <svg id="chart"/>
+    </div>
+    <div class="col-md-5">
+        <h4>Legend</h4>
+        <svg id="legend"/>
+    </div>
+</div>
+
+<script>
+
+    var names = ['apple', 'google', 'facebook', 'twitter'];
+    var count = [155910412, 334636221, 618115288, 504781131];
+    var dataset;
+    var globalX, globalY, globalColor;
+
+    var category_color = ["#3C94D1",
+        "#98DF14",
+        "#F0643A",
+        "#02F9C0",
+        "#F2D7B6",
+        "#F655A2",
+        "#276C39",
+        "#EFB721",
+        "#786160",
+        "#23D5DE",
+        "#EACBFE",
+        "#6E508F",
+        "#A1600A",
+        "#39CA69",
+        "#1AAB8A",
+        "#CCF4FB",
+        "#F2A0A4",
+        "#9AAF19",
+        "#C578CF",
+        "#9B4860",
+        "#DAF263",
+        "#6E633C",
+        "#F8E195",
+        "#3B9830",
+        "#B7F6D8",
+        "#8CF75F",
+        "#FCA8E0",
+        "#FFBD8F",
+        "#9A431F",
+        "#2C81A4",
+        "#51636B",
+        "#82FDB2",
+        "#AB386B",
+        "#2EBCD7",
+        "#EDF1C5",
+        "#12A5F3",
+        "#DCB102"];
+
+    var sectors = ["Technology hardware & equipment", "Oil & gas producers", "Software & computer services", "Nonlife insurance", "Pharmaceuticals & biotechnology", "Banks", "General industrials", "General retailers", "Food producers", "Household goods & home construction", "Leisure goods", "Fixed line telecommunications", "Automobiles & parts", "Mobile telecommunications", "Mining", "Beverages", "Media", "Tobacco", "Oil equipment & services", "Chemicals", "Financial services", "Aerospace & defence", "Personal goods", "Travel & leisure", "Food & drug retailers", "Industrial transportation", "Health care equipment & services", "Electricity", "Gas, water & multiutilities", "Life insurance", "Industrial engineering", "Real estate investment trusts", "Electronic & electrical equipment", "Support services", "Construction & materials", "Real estate investment & services", "Industrial metals & mining"];
+
+    function render(rank, sector, sort_by) {
+
+        $( "svg" ).empty();
+
+        d3.csv("data/list.csv", function(data) {
+            data.forEach(function(d) {
+                d.rank = +d.rank;
+                d.count = +d.count;
+                d.value = +d.value;
+            });
+
+            data = data.filter(function(d){
+                return !isNaN(d.count)
+            });
+
+            dataset = data;
+
+            var color = d3.scale.ordinal()
+                    .domain(data.map(function(d) { return d.sector}))
+                    .range(category_color);
+
+
+            // filter data
+            if (sector != 'all') {
+                data = data.filter(function(d){
+                   return d.sector == sector
+                });
+            }
+
+            // sort data
+
+            if (sort_by == 'count') {
+                data = data.sort(function(a, b) { return d3.descending(a.count, b.count)});
+            } else {
+                data = data.sort(function(a, b) { return d3.ascending(a.rank, b.rank)});
+            }
+
+            // get top-rank (top-10, top-20, etc)
+            data = data.slice(0,rank);
+
+            // define all variable
+            var width = 800;
+            var bar_height = 20;
+            var left_width = 150;
+            var right_width = 100;
+            var gap = 5;
+
+            var svg = d3.select("svg#chart")
+                    .attr("width", left_width + width + 40 + right_width)
+                    .attr("height", (bar_height + gap * 2) * data.length + 30)
+                    .append('g').attr('transform', 'translate(10, 20)');
+
+            var x, y;
+            x = d3.scale.linear()
+                    .domain([0, d3.max(data, function(d) {return d.count})])
+                    .range([0, width]);
+
+            y = d3.scale.ordinal()
+                    .domain(data.map(function(d) { return d.count }))
+                    .rangeBands([0, (bar_height + 2 * gap) * data.length]);
+
+            svg.selectAll('rect')
+                    .data(data)
+                    .enter().append('rect')
+                    .transition()
+                    .duration(200)
+                    .attr('x', left_width)
+                    .attr('y', function(d) {
+                        return y(d.count) + gap;
+                    })
+                    .attr('class', 'bar')
+                    .attr('width', function(d){return x(d.count)})
+                    .style('fill', function(d){ return color(d.sector)})
+                    .style('stroke',function(d){ return color(d.sector)})
+                    .attr('height', bar_height);
+
+            svg.selectAll('text.count')
+                    .data(data)
+                    .enter().append('text')
+                    .attr('x', function(d) { return x(d.count) + left_width; })
+                    .attr('y', function (d) {
+                        return y(d.count) + y.rangeBand() / 2
+                    })
+                    .attr('dx', 5)
+                    .attr('dy', '.36em')
+                //.attr('text-anchor', 'end')
+                    .attr('class', 'count')
+                    .text(function(d){return numberWithCommas(d.count)});
+
+            svg.selectAll('text.company')
+                    .data(data)
+                    .enter().append('text')
+                    .attr("x", left_width)
+                    .attr("y", function(d){ return y(d.count) + y.rangeBand()/2 } )
+                    .attr('dx', '-5')
+                    .attr("dy", ".36em")
+                    .attr("text-anchor", "end")
+                    .attr('class', 'company')
+                    .text(function(d){return d.company});
+
+            var max_val = d3.max(data, function(d) {return d.count});
+
+            svg.selectAll("line")
+                    .data(split_data(max_val))
+                    .enter().append("line")
+                    .attr("x1", function(d) { return x(d) + left_width; })
+                    .attr("x2", function(d) { return x(d) + left_width; })
+                    .attr("y1", 0)
+                    .attr("y2", (bar_height + gap * 2) * data.length);
+
+//        var legendRectSize = 18;
+//        var legendSpacing = 4;
+//
+//        var legend = d3.select("svg#legend")
+//                .attr("width", left_width + width + 40 + right_width)
+//                .attr("height", (bar_height + gap * 2) * data.length + 30)
+//                .append('g').attr('transform', 'translate(10, 20)');
+//
+//        console.log(color.domain())
+//
+//        var legend = legend.selectAll('.legend')
+//                .data(color.domain())
+//                .enter()
+//                .append('g')
+//                .attr('class', 'legend')
+//                .attr('transform', function(d, i) {
+//                    var height = legendRectSize + legendSpacing;
+//                    var offset =  height * color.domain().length / 2;
+//                    var horz = 0;
+//                    var vert = i * height;
+//                    return 'translate(' + horz + ',' + vert + ')';
+//                });
+//
+//        legend.append('rect')                                     // NEW
+//                .attr('width', legendRectSize)                          // NEW
+//                .attr('height', legendRectSize)                         // NEW
+//                .style('fill', function(d){ return color(d.sector)})                                   // NEW
+//                .style('stroke', function(d){ return color(d.sector)});                                // NEW
+//
+//        legend.append('text')                                     // NEW
+//                .attr('x', legendRectSize + legendSpacing)              // NEW
+//                .attr('y', legendRectSize - legendSpacing)              // NEW
+//                .text(function(d) { return d.sector; });
+//
+//        svg.selectAll(".rule")
+//                .data(split_data(max_val))
+//                .enter().append("text")
+//                .attr("class", "rule")
+//                .attr("x", function(d) { return x(d) + left_width; })
+//                .attr("y", 0)
+//                .attr("dy", -6)
+//                .attr("text-anchor", "middle")
+//                .attr("font-size", 10)
+//                .text(String);
+
+            create_legend(data, color);
+
+        });
+    }
+
+    function create_legend(data, color) {
+
+        current_sector = data.map(function(d){ return d.sector });
+        current_sector = _.unique(current_sector);
+        console.log(current_sector);
+
+        var legend = d3.select("svg#legend")
+                .attr("width", 300)
+                .attr("height", 30 * (current_sector.length + 1))
+                .append('g').attr('transform', 'translate(10, 20)');
+
+        y = d3.scale.ordinal()
+                .domain(current_sector)
+                .rangeBands([0, (20 + 2 * 5) * current_sector.length]);
+
+        legend.selectAll('.legend')
+                .data(current_sector)
+                .enter()
+                .append('rect')
+                .attr('class', 'legend')
+                .attr('x', 0)
+                .attr('y', function(d) {
+                    return y(d);
+                })
+                .attr('width', 20)
+                .attr('height', 20)
+                .style('fill', function(d){ return color(d)})
+                .style('stroke', function(d){ return color(d)});
+
+
+        legend.selectAll('text')
+                .data(current_sector)
+                .enter().append('text')
+                .attr("x", 20 + 5)
+                .attr("y", function(d){ return y(d) + y.rangeBand()/2 } )
+                .attr('dx', '5')
+                //.attr("dy", ".36em")
+                .attr('class', 'legend-text')
+                .text(function(d){return d});
+
+    }
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function split_data(x) {
+        half = Math.round(x / 2);
+        q1 = Math.round(half / 2);
+        q3 = half + q1;
+        return [0, q1, half, q3, x]
+    }
+
+    var list = document.getElementById("select-sector");
+    for(var i in sectors) {
+        list.add(new Option(sectors[i], sectors[i]));
+    }
+
+    $('button#filter').click(function() {
+        var sector = $('#select-sector').val();
+        if(sector == '') {
+            sector = 'all';
+        }
+
+        var rank = $('#select-rank').val();
+        if(rank == '') {
+            rank = 'count';
+        }
+
+        var sort_by = $('#select-sort_by').val();
+        if(sort_by == '') {
+            sort_by = 20;
+        }
+
+        render(rank, sector, sort_by);
+    });
+
+    $( document ).ready(function() {
+        render(50, 'all', 'count');
+    });
+
+</script>
+
+</body>
+</html>

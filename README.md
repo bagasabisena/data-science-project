@@ -20,3 +20,14 @@ $ cd ../
 $ jar -cf udfs.jar udfs
 ```
 Now, the udfs.jar file can be included in the pig-files to call the UDF's.
+
+## Visualization
+
+The d3.js based visualization of the result is located on the folder viz. Open the `index.html` to edit the visualization.
+
+To test on your local browser, run any http server beforehand, such as
+```
+python -m SimpleHTTPServer 8000
+```
+
+then open browser with url `localhost:8000`. The visualization is running live on following [link](http://homepage.tudelft.nl/9k0y3/).
