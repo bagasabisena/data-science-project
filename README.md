@@ -30,4 +30,6 @@ To test on your local browser, run any http server beforehand, such as
 python -m SimpleHTTPServer 8000
 ```
 
-then open browser with url `localhost:8000`. The visualization is running live on following [link](http://homepage.tudelft.nl/9k0y3/).
+then open browser with url `localhost:8000`. 
+
+You can also try the live visualization on following [link](http://homepage.tudelft.nl/9k0y3/).
